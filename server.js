@@ -15,7 +15,8 @@ app.use(bodyParser.json())
 
 // Start defining your routes here
 app.get('/', (req, res) => {
-  res.send('Hello world')
+  // fetch('...', { headers: { Authorization: 'my secret api key' }})
+  res.send(process.env.API_KEY)
 })
 
 // Start the server
